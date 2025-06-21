@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Alliterative Alimentation</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link id="favicon" rel="icon" href="https://blog.beeminder.com/wp-content/uploads/2022/04/allitimentation-way.jpeg" 
+      type="image/x-icon">
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="page">
+      <div id="ancient-browser-warning"></div>
+      <div class="header">
+        <button class="rotate-r" type="button">⬅ ROTATE</button>
+        <button class="rotate-l" type="button">ROTATE ⮕</button>
+      </div>
+      <div class="container">
+        <div class="empty">
+          <div id="mon" class="dow">Monday</div>
+          <div id="mmo" draggable="true" class="fill">MonoMeal</div>
+        </div>
+        <div class="empty">
+          <div id="tue" class="dow">Tuesday</div>
+          <div id="ttu" draggable="true" class="fill">Tareable</div>
+        </div>
+        <div class="empty">
+          <div id="wed" class="dow">Wednesday</div>
+          <div id="wwe" draggable="true" class="fill">WasteAway</div>
+        </div>
+        <div class="empty">
+          <div id="thu" class="dow">Thursday</div>
+          <div id="tth" draggable="true" class="fill">Themeless</div>
+        </div>
+        <div class="empty">
+          <div id="fri" class="dow">Friday</div>
+          <div id="ffr" draggable="true" class="fill">Fitness</div>
+        </div>
+        <div class="empty">
+          <div id="sat" class="dow">Saturday</div>
+          <div id="ssa" draggable="true" class="fill">Salubrious</div>
+        </div>
+        <div class="empty">
+          <div id="sun" class="dow">Sunday</div>
+          <div id="ssu" draggable="true" class="fill">Social</div>
+        </div>
+      </div>      
+    <p>
+      test footer but it gets covered up by the page div :(
+    </p>
+    </div>
+    <!-- trying and failing to add background text
+    <div id="background">
+    <p id="bgtext">testing background text sad trombone</p>
+    </div>
+    -->
+  </body>
+</html>
+
+<script src="/drag.js"></script>
+<script>
+// -----------------------------------------------------------------------------
+function $(id) { return document.getElementById(id) }    // convenience function
+function ancient_browser_check() {
+  "use strict"                             // does this matter? i don't know
+  try { eval("let foo = (x)=>x+1") }       // feature test: "let" & arrow funcs
+  catch (e) { return true }                // bad browser, not understanding ES6
+  return false                             // good browser, not being ancient
+}
+const faire = // not using this one currently
+ "http://blog.beeminder.com/wp-content/uploads/2022/04/allitimentation-all.jpeg"
+const screenshot = "http://cdn.glitch.global/" +
+  "7542079b-92de-4d82-b7f6-7dd0e730b17d/allitimentation-squares.png"
+if (ancient_browser_check()) {
+  $('ancient-browser-warning').innerHTML = 
+    "<h1>Ancient browser warning: nothing's gonna work here!</h1>" +
+    "<p><img title='Screenshot of the app' alt='Screenshot of the app' " +
+    "src='" + screenshot + "'/>" +
+    "</p>"
+}
+// -----------------------------------------------------------------------------
+</script>
+

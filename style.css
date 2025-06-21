@@ -1,0 +1,160 @@
+body,
+html {
+  font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.header {
+  margin-top: 5px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5px;
+}
+
+.rotate-r {
+  width: 100%;
+  font-size: 19px;
+  cursor: pointer;
+}
+
+.rotate-l {
+  width: 100%;
+  font-size: 19px;
+  cursor: pointer;
+}
+
+.page {
+  height: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  padding: 0px 15px 0px 15px;
+  /* z-index: 1; */
+}
+
+/* trying and failing to make a background...
+#background {
+  position: absolute;
+  z-index: 0;
+  background: white;
+  display: block;
+  min-height: 50%; 
+  min-width: 50%;
+  color: yellow;
+}
+
+#bgtext {
+  color: lightgrey;
+  font-size: 120px;
+}
+*/
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 15px;
+  margin-top: 5px;
+  height: 100%;
+}
+
+.fill {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 87px;
+  border: 2px black solid;
+  border-radius: 11px;
+  cursor: grab;
+}
+
+.fill:active {
+  cursor: grabbing;
+}
+
+.dow {
+  height: 87px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px black solid;
+  border-radius: 11px;
+}
+
+/* -------------------------------------------------------------------------- */
+#mon.dow    { background-color: #ffb800; } /*       (3X saturation of orange) */
+#mmo.fill   { background-color: #ffe39b; } /* mon = orange for clockwork      */
+#tue.dow    { background-color: #f47c7c; } /*       (3X saturation of red)    */
+#ttu.fill   { background-color: #f4cccc; } /* tue = red for bright red line   */
+#wed.dow    { background-color: #bababa; } /*       (eyeballed  darker gray)  */
+#wwe.fill   { background-color: #e1e1e1; } /* wed = gray for non-sustenance   */
+#thu.dow    { background-color: #fff000; } /*       (3X saturation of yellow) */
+#tth.fill   { background-color: #fffaa9; } /* thu = golden                    */
+#fri.dow    { background-color: #6b9ef8; } /*       (3X saturation of blue)   */
+#ffr.fill   { background-color: #c9daf8; } /* fri = blue for the sky          */
+#sat.dow    { background-color: #84ea60; } /*       (3X saturation of green)  */
+#ssa.fill   { background-color: #c8eabc; } /* sat = green for vegetables      */
+#sun.dow    { background-color: #a180e9; } /*       (3X saturation of purple) */
+#ssu.fill   { background-color: #d1c6e9; } /* sun = purple for festiveness    */
+/* -------------------------------------------------------------------------- */
+
+1. #ffb800
+2. #f47c7c
+3. #bababa
+4. #fff000
+5. #6b9ef8
+6. #84ea60
+7. #a180e9
+
+
+/* -----------------------------------------------------------------------------
+OLD COLOR SCHEME #SCHDEL
+#mon.dow    { background-color: #fff000; }        (3X saturation of yellow) 
+#mmo.fill   { background-color: #fffaa9; }  mon = yellow for sol            
+#tue.dow    { background-color: #ffb800; }        (3X saturation of orange) 
+#ttu.fill   { background-color: #ffe39b; }  tue = orange for yellow+red bal 
+#wed.dow    { background-color: #bababa; }        (eyeballed  darker gray)  
+#wwe.fill   { background-color: #e1e1e1; }  wed = gray for non-sustenance   
+#thu.dow    { background-color: #f47c7c; }        (3X saturation of red)    
+#tth.fill   { background-color: #f4cccc; }  thu = red for stop having theme 
+#fri.dow    { background-color: #6b9ef8; }        (3X saturation of blue)   
+#ffr.fill   { background-color: #c9daf8; }  fri = blue for the sky          
+#sat.dow    { background-color: #84ea60; }        (3X saturation of green)  
+#ssa.fill   { background-color: #c8eabc; }  sat = green for vegetables      
+#sun.dow    { background-color: #a180e9; }        (3X saturation of purple) 
+#ssu.fill   { background-color: #d1c6e9; }  sun = purple for festiveness    
+----------------------------------------------------------------------------- */
+
+/* Cantor's original choices
+#mon.dow    { background-color: #ff5e5e; } 
+#mmo.fill   { background-color: #ff5e5e; }
+#tue.dow    { background-color: #ff8800; }
+#ttu.fill   { background-color: #ff8800; }
+#wed.dow    { background-color: #ffff00; }
+#wwe.fill   { background-color: #ffff00; }
+#thu.dow    { background-color: #00ff00; }
+#tth.fill   { background-color: #00ff00; }
+#fri.dow    { background-color: #00ffff; }
+#ffr.fill   { background-color: #00ffff; }
+#sat.dow    { background-color: #8888ff; }
+#ssa.fill   { background-color: #8888ff; }
+#sun.dow    { background-color: #ff29ff; }
+#ssu.fill   { background-color: #ff29ff; }
+*/
+
+.empty {
+  height: 100%;
+}
+
+.hold {
+  color: black;
+}
+
+.hovered {
+  color: black;
+}
+
+.invisible {
+  display: none;
+}
